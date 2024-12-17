@@ -64,9 +64,9 @@ session = Session()
 class TodoListApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("To-Do List")
+        self.root.title("App Gestion Tareas")
 
-        self.text_intro = tk.Label(root, text="Texto titulo")
+        self.text_intro = tk.Label(root, text="Lista de tareas:")
         self.text_intro.grid(row=0, column=0, padx=10, pady=5)
 
         self.task_entry_title_label = tk.Label(root, text="Titulo Tarea")
@@ -81,28 +81,28 @@ class TodoListApp:
         self.task_entry_content = tk.Entry(root, width=50)
         self.task_entry_content.grid(row=4, column=0, padx=10, pady=5)
 
-        self.add_button = tk.Button(root, text="Add Task", command=self.add_task)
+        self.add_button = tk.Button(root, text="Añadir tarea", command=self.add_task)
         self.add_button.grid(row=5, column=0, padx=10, pady=5)
 
         self.task_listbox = tk.Listbox(root, width=70, height=15, selectmode=tk.SINGLE)
         self.task_listbox.grid(row=6, column=0, padx=10, pady=5)
 
-        self.complete_button = tk.Button(root, text="Mark as Completed", command=self.mark_as_completed)
+        self.complete_button = tk.Button(root, text="Marcar como completada", command=self.mark_as_completed)
         self.complete_button.grid(row=7, column=0, padx=10, pady=5)
 
-        self.delete_button = tk.Button(root, text="Delete Task", command=self.delete_task)
+        self.delete_button = tk.Button(root, text="Eliminar tarea", command=self.delete_task)
         self.delete_button.grid(row=8, column=0, padx=10, pady=5)
 
-        self.export_button_csv = tk.Button(root, text="Export to Csv", command=self.export_csv)
+        self.export_button_csv = tk.Button(root, text="Exportar a Csv", command=self.export_csv)
         self.export_button_csv.grid(row=9, column=0, padx=10, pady=5)
 
-        self.export_button_json = tk.Button(root, text="Export to Json", command=self.export_to_json)
+        self.export_button_json = tk.Button(root, text="Exportar a Json", command=self.export_to_json)
         self.export_button_json.grid(row=10, column=0, padx=10, pady=5)
 
         self.import_entry = tk.Entry(root, width=50)
         self.import_entry.grid(row=11, column=0, padx=10, pady=5)
 
-        self.import_button = tk.Button(root, text="Import Json", command=self.import_from_json)
+        self.import_button = tk.Button(root, text="Importar Json", command=self.import_from_json)
         self.import_button.grid(row=12, column=0, padx=10, pady=5)
 
         self.load_tasks()
